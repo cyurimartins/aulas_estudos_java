@@ -13,7 +13,7 @@ public class AppEntrada {
             System.out.print("Informe o seu salário: ");
             aumento = entrada.nextFloat();         
                                  
-            novoSalario = salario + (salario/aumento);
+            // novoSalario = salario + (aumento/100 + salario);
                     
             System.out.println("O novo salario do funcionário é: " + novoSalario);
     }
