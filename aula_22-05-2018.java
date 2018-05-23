@@ -11,21 +11,20 @@ import javax.swing.JOptionPane;
 public class AulaMetodoAbstrato {
 
     public static void main(String[] args) {
-         //CRIANDO OBJETO COMPACTDISC
+         //INSTANCIA COMPACTDISC
         CompactDisc c1 = new CompactDisc();        
         
-        //CRIANDO OBJETO LIVRO
+        //INSTANCIA DE LIVRO
         Livro l1 = new Livro();
         Livro l2 = new Livro();
 
-        
+        //CHAMANDO O METODO ATUALIZARPRECO ATRAVES DO OBJETO CRIADO E UTILIZANDO JOPTIONPANE PARA ENTRADA DE DADOS
         l1.atualizarPreco(Double.parseDouble(JOptionPane.showInputDialog("Informe o preço do livro: ")));
-        
+        //SAIDA DE DADOS
         JOptionPane.showMessageDialog(null, "O preço do livro é " + l1.getPreco());      
     }
     
 }
-
 
 //CLASSE PRODUTO
 
