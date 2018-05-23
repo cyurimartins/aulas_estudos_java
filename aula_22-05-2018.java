@@ -1,16 +1,17 @@
 //AULA 22/05/2018 - PROGRAMACAO 1
 
-package aula01;
-import javax.swing.JOptionPane; 
+package aulametodoabstrato;
+
+import javax.swing.JOptionPane;
+
 /**
  *
- * @author aluno
+ * @author ymartins
  */
-public class Aula01 {
+public class AulaMetodoAbstrato {
 
     public static void main(String[] args) {
-                
-        //CRIANDO OBJETO COMPACTDISC
+         //CRIANDO OBJETO COMPACTDISC
         CompactDisc c1 = new CompactDisc();        
         
         //CRIANDO OBJETO LIVRO
@@ -18,20 +19,16 @@ public class Aula01 {
         Livro l2 = new Livro();
 
         
-        l1.atualizarPreco(0);
-        l1.statusPreco();
-        l2.atualizarPreco(0);
+        l1.atualizarPreco(Double.parseDouble(JOptionPane.showInputDialog("Informe o preço do livro: ")));
         
+        JOptionPane.showMessageDialog(null, "O preço do livro é " + l1.getPreco());      
     }
     
 }
 
 
-package aula01;
-/**
- *
- * @author aluno
- */
+//CLASSE PRODUTO
+
 public abstract class Produto {
     
     private int codigo;
@@ -57,13 +54,8 @@ public abstract class Produto {
     
 }
 
-package aula01;
-import javax.swing.JOptionPane;
+//CLASSE COMPACTDISC
 
-/**
- *
- * @author aluno
- */
 public class CompactDisc extends Produto{
     
     private String artista;
@@ -84,20 +76,15 @@ public class CompactDisc extends Produto{
     public String getGravadora(){
         return gravadora;
     }
-    
+   
     @Override
     public void atualizarPreco(double preco) {
-        super.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Informe o preço do livro: ")));                     
-        
+        super.setPreco(preco);
     }    
 }
 
-package aula01;
-import javax.swing.JOptionPane; 
-/**
- *
- * @author aluno
- */
+//CLASSE LIVRO
+
 public class Livro extends Produto{
     
     private String autor;
@@ -119,14 +106,9 @@ public class Livro extends Produto{
         return isbn;
     }
     
-    @Override
+   @Override
     public void atualizarPreco(double preco) {
-        super.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Informe o preço do livro: ")));                     
-                   
-    }   
-    
-    public void statusPreco(){
-        JOptionPane.showMessageDialog(null, super.getPreco());
-    
+        super.setPreco(preco);
     }    
+    
 }
