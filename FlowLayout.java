@@ -16,7 +16,7 @@ public class Layout extends JFrame{
 		add(botao);
 		add(botao2);
 		
-		setTitle("Exemplo Border Layout");
+		setTitle("Exemplo Flow Layout");
 		setSize(700,600);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
